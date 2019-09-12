@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import User, Group, Event, Comment
 # Create your views here.
 
 def users(request):
