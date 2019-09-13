@@ -13,14 +13,19 @@ def events_new(request):
     return render(request, 'events/new.html')
 
 def events_details(request):
-    return render(request, 'events/details.html')    
+    return render(request, 'events/details.html')
+
+def groups_index(request):
+    return render(request, 'groups/index.html')
+
+def groups_new(request):
+    return render(request, 'groups/new.html')
+
+def groups_details(request):
+    return render(request, 'groups/details.html')         
 
 def users(request):
     return render(request, 'users.html')
-
-def groups_index(request):
-    groups = Group.objects.all()
-    return render(request, 'groups.html', {'groups' : groups})
 
 def signup(request):
   error_message = ''
