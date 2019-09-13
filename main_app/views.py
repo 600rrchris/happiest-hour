@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import User, Group, Event, Comment
 # Create your views here.
 def home(request):
-    return HttpResponse('<h1>hello world<h1>')
+    return HttpResponse('<h1>Happiest Hour</h1>')
 def users(request):
     return render(request, 'users.html')
 
