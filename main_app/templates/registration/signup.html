@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HAPPIEST HOUR</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
     <h1>Sign Up</h1>
 
     {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
@@ -17,5 +11,6 @@
         <input type="submit" class="btn" value="signup">
         <input type="hidden" name="next" value="{{ next }}">
       </form>
-</body>
-</html>
+
+
+{% endblock %}
