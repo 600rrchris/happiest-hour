@@ -33,7 +33,11 @@
       <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_new' %}">Add Event</a>
       </li>
       </ul>
-    
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a style="color:#FFFFF0;" class="nav-link" href="{% url 'logout' %}">Log Out</a> 
+        </li>
+        <ul>
       {% else %}
   <ul class="navbar-nav ml-auto">
   <li class="nav-item">
