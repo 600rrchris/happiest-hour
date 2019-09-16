@@ -1,6 +1,7 @@
 from django import forms
 from .models import Poll
 
+
 class PollForm(forms.Form):
     chosen_locations_options = forms.MultipleChoiceField(choices=[], label='Location Name', required=False,
                                                      widget=forms.SelectMultiple(
