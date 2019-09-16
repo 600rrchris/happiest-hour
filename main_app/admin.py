@@ -4,5 +4,5 @@ from .models import Group, User, Comment, Event, Poll
 admin.site.register(Group)
 admin.site.register(Comment)
 admin.site.register(Event)
-admin.site.register(Poll)
 
+admin.site.register(Poll)
