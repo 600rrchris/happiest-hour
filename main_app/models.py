@@ -18,17 +18,18 @@ class Group(models.Model):
         return reverse('details', kwargs={'group_id': self.id})
 
 
-class Event(models.Model):
-    title = models.CharField(max_length=250)
-    group = models.ManyToManyField(Group)
-    location = models.URLField(max_length=200)
-    time = models.TimeField(auto_now=False, auto_now_add=False,)
-    date = models.DateField(auto_now=False, auto_now_add=False,)
 
 class Comment(models.Model):
     user = models.ManyToManyField(User)
     content = models.TextField(max_length=250)
 
+class Event(models.Model):
+    title = models.CharField(max_length=250)
+    # group = models.ManyToManyField(Group)
+    location = models.URLField(max_length=200)
+    time = models.TimeField(auto_now=False, auto_now_add=False,)
+    description = models.TextField(max_length=500)
+    date = models.DateField(auto_now=False, auto_now_add=False,)
 # Creates poll form within events 
 class Poll(models.Model):
     location_name = models.CharField(max_length=200)
