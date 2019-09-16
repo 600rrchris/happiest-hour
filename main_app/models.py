@@ -22,8 +22,16 @@ class Event(models.Model):
     title = models.CharField(max_length=250)
     group = models.ManyToManyField(Group)
     location = models.URLField(max_length=200)
-    time = models.TimeField(auto_now=False, auto_now_add=False,)
-    date = models.DateField(auto_now=False, auto_now_add=False,)
+    time = models.TimeField('time')
+    date = models.DateField('date')
+
+    def __str__(self):
+    # Nice method for obtaining the friendly value of a Field.choice
+        return f"{self.get_meal_display()} on {self.date}"
+
+  # change the default sort
+    class Meta:
+        ordering = ['-date']
 
 class Comment(models.Model):
     user = models.ManyToManyField(User)
