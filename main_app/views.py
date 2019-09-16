@@ -68,7 +68,7 @@ class GroupUpdate(LoginRequiredMixin, UpdateView):
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
-    fields = ['title', 'location', 'time', 'date']
+    fields = ['title',[Group], 'time', 'date', 'location', 'Comment']
 
 
 class EventDelete(LoginRequiredMixin, DeleteView):
