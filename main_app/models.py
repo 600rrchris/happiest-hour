@@ -7,7 +7,9 @@ from django.urls import reverse
 
 class Group(models.Model):
     name = models.CharField(max_length=250)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, related_name='owner', on_delete=models.CASCADE)
+    users = models.ManyToManyField(User)
+
 
     def __str__(self):
         return self.name
