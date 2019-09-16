@@ -13,7 +13,9 @@
 .navbar.navbar-expand-lg.navbar-light.bg-warning
 {
 background: #155263 !important;
-
+}
+a.nav-link {  
+font-size: 18px;
 }
 .main {
 background: #ffc93c;
@@ -44,6 +46,6 @@ width: 100px;
 background: lightgray;   
 }
 /* events cards */
-.card {
-
+.card-body {
+background: #ff9a3c;
 }

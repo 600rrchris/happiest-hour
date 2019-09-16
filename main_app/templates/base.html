@@ -21,16 +21,16 @@
       {% if user.is_authenticated %}
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-      <a style="color:#FFFFF0;" class="nav-link" href="#">All Groups</a>
+      <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups' %}">All Groups</a>
       </li>
       <li class="nav-item">
-      <a style="color:#FFFFF0;" class="nav-link" href="#">All Events</a>
+      <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_index'%}">All Events</a>
       </li>
       <li class="nav-item">
-      <a style="color:#FFFFF0;" class="nav-link" href="#">Create Group</a>
+      <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups_new' %}">Create Group</a>
       </li>
       <li class="nav-item">
-      <a style="color:#FFFFF0;" class="nav-link" href="#">Create Event</a> 
+      <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_new' %}">Create Event</a> 
       </li>
     </ul>
       {% else %}
