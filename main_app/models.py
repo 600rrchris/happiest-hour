@@ -7,7 +7,9 @@ from django.urls import reverse
 
 class Group(models.Model):
     name = models.CharField(max_length=250)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, related_name='owner', on_delete=models.CASCADE)
+    users = models.ManyToManyField(User)
+
 
     def __str__(self):
         return self.name
@@ -27,7 +29,7 @@ class Comment(models.Model):
     user = models.ManyToManyField(User)
     content = models.TextField(max_length=250)
 
-# Creates polls within events 
+# Creates poll form within events 
 class Poll(models.Model):
     location_name = models.CharField(max_length=200)
     count = models.IntegerField(default=0)

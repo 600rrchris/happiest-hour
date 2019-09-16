@@ -30,17 +30,12 @@
       <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups_new' %}">Add Group</a>
       </li>
       <li class="nav-item">
-      <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_new' %}">Add Event</a> 
-      </li>
-    </ul>
-      <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a style="color:#FFFFF0;" class="nav-link" href="{% url 'logout' %}">Log Out</a> 
+      <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_new' %}">Add Event</a>
       </li>
       </ul>
     
       {% else %}
-<ul class="navbar-nav ml-auto">
+  <ul class="navbar-nav ml-auto">
   <li class="nav-item">
       <a style="color:#FFFFF0;" class="nav-link" href="{% url 'signup' %}">Sign Up</a> 
   </li>

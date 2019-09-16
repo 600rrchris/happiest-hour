@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import User, Group, Event, Comment
+from .models import User, Group, Event, Comment, Poll
+from .forms import PollForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -54,7 +55,7 @@ def signup(request):
 
 class GroupCreate(LoginRequiredMixin, CreateView):
     model = Group
-    fields = '__all__'
+    fields = ['users', 'name']
     success_url = '/groups/'  
 
 class GroupDelete(LoginRequiredMixin, DeleteView):
@@ -67,7 +68,7 @@ class GroupUpdate(LoginRequiredMixin, UpdateView):
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
-    fields = '__all__'
+    fields = ['title', 'location', 'time', 'date']
 
 
 class EventDelete(LoginRequiredMixin, DeleteView):
@@ -79,3 +80,16 @@ class EventUpdate(LoginRequiredMixin, UpdateView):
     fields = '__all__'        
 
 
+def index(request):
+    if request.method == 'POST':
+        form = PollForm(request.POST)
+        if form.is_valid():
+            chosen_locations_options = form.cleaned_data.get('chosen_locations_options', [])
+            other_location_name = form.cleaned_data.get('other_location_name', '')
+            Poll.bulk_poll(chosen_locations_options + [other_location_name])
+        message = 'Thank You For Your Contribution!'
+    elif request.method == 'GET':
+        message = ''
+
+    form = PollForm()
+    return render(request, 'templates/events/survey.html', {'form': form, 'message': message})
