@@ -27,7 +27,7 @@ class Comment(models.Model):
     user = models.ManyToManyField(User)
     content = models.TextField(max_length=250)
 
-# Creates polls within events 
+# Creates poll form within events 
 class Poll(models.Model):
     location_name = models.CharField(max_length=200)
     count = models.IntegerField(default=0)
