@@ -10,17 +10,22 @@
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { ... }
 
+.navbar.navbar-expand-lg.navbar-light.bg-warning
+{
+background: #155263 !important;
 
+}
 .main {
-background: rgb(21,82,99);
-background: linear-gradient(0deg, rgba(21,82,99,1) 24%, rgba(216,106,67,1) 56%, rgba(255,128,60,1) 73%,
- rgba(255,154,60,1) 87%, rgba(255,201,60,1) 100%);
+background: #ffc93c;
 height: 500px;
 padding: 10px;
 }
 .footer {
-background: #ffc93c;
+background: #155263;
 height: 150px;
+}
+body {
+color: #FFFFF0;
 }
 
 form {   
@@ -33,8 +38,12 @@ box-shadow: 0px 5px #464646;
 margin: 10px;
 }
 
-
+/* sign in button */
 .btn {
 width: 100px;    
 background: lightgray;   
+}
+/* events cards */
+.card {
+
 }
