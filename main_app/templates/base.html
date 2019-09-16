@@ -33,12 +33,15 @@
             <li class="nav-item">
             <a class="nav-link" href="#">Create Event</a> 
             </li>
+            <li class="nav-item right"><a class="nav-link right" href="{% url 'logout' %}">Log Out</a>
+            </li>
+
             {% else %}
             <li class="nav-item">
-                <a class="nav-link" href="#">Sign Up</a> 
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a> 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Log In</a> 
+                <a class="nav-link" href="{% url 'login' %}">Log In</a> 
             </li>
             {% endif %}
            
