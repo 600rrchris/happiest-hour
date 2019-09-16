@@ -9,3 +9,16 @@
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { ... }
+
+
+.main {
+background: rgb(21,82,99);
+background: linear-gradient(0deg, rgba(21,82,99,1) 24%, rgba(216,106,67,1) 56%, rgba(255,128,60,1) 73%,
+ rgba(255,154,60,1) 87%, rgba(255,201,60,1) 100%);
+height: 500px;
+padding: 10px;
+}
+.footer {
+background: #ffc93c;
+height: 150px;
+}
