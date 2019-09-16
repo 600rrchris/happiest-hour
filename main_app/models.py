@@ -35,10 +35,10 @@ class Poll(models.Model):
     count = models.IntegerField(default=0)
 
     def __str__(self):
-        return '%s: %d votes' % (self.location_name, self.count)
+        return '%s: %d pollss' % (self.location_name, self.count)
 
     @classmethod
-    def bulk_vote(cls, location_name):
+    def bulk_poll(cls, location_name):
         with transaction.atomic():
             for location_name in location_name:
                 if len(location_name) == 0:

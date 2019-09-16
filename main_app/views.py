@@ -24,6 +24,9 @@ def events_new(request):
 def events_details(request):
     return render(request, 'events/details.html')
 
+def events_poll(request):
+    return render(request, 'events/poll.html')
+
 @login_required
 def groups_index(request):
     return render(request, 'groups/index.html')
