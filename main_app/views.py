@@ -55,6 +55,7 @@ def signup(request):
 class GroupCreate(LoginRequiredMixin, CreateView):
     model = Group
     fields = '__all__'
+    success_url = '/groups/'  
 
 class GroupDelete(LoginRequiredMixin, DeleteView):
     model = Group
@@ -62,9 +63,9 @@ class GroupDelete(LoginRequiredMixin, DeleteView):
 
 class GroupUpdate(LoginRequiredMixin, UpdateView):
     model = Group
-    fields = '__all__'    
+    fields = '__all__'
 
-class EvenCreate(LoginRequiredMixin, CreateView):
+class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
 
