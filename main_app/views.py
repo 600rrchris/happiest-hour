@@ -72,7 +72,7 @@ class EventCreate(LoginRequiredMixin, CreateView):
 
 
 class EventDelete(LoginRequiredMixin, DeleteView):
-    model = Group
+    model = Event
     success_url = '/events/'
 
 class EventUpdate(LoginRequiredMixin, UpdateView):
