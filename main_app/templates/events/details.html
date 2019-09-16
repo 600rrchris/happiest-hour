@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
@@ -8,3 +9,25 @@
 
 
 {% endblock %}
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    </div>
+    <!-- Add the following markup -->
+    <div class="card-action">
+      <a href="{% url 'events_update' event.id %}">Edit</a>
+      <a href="{% url 'events_delete' event.id %}">Delete</a>
+    </div>
+    <!-- New markup above -->
+  </div>
+  
+</body>
+</html>
+>>>>>>> fb24d2f7779ac95877e9d10d8ae36c5814d7b1ad
