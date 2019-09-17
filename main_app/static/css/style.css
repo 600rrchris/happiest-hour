@@ -10,6 +10,12 @@
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { ... }
 
+/* 
+Google Fonts: 
+font-family: 'Bitter', serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+
 .navbar.navbar-expand-lg.navbar-light.bg-warning
 {
 background: #155263 !important;

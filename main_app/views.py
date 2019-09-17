@@ -95,4 +95,4 @@ def index(request):
         message = ''
 
     form = PollForm()
-    return render(request, 'templates/events/survey.html', {'form': form, 'message': message})
+    return render(request, 'events/poll.html', {'form': form, 'message': message})
