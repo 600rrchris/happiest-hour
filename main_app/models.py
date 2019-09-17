@@ -18,6 +18,14 @@ class Group(models.Model):
         return reverse('details', kwargs={'group_id': self.id})
 
 
+class Event(models.Model):
+    title = models.CharField(max_length=250)
+    group = models.ManyToManyField(Group)
+    location = models.URLField(max_length=200)
+    time = models.TimeField('time')
+    date = models.DateField('date')
+
+
 
 class Comment(models.Model):
     user = models.ManyToManyField(User)
@@ -30,18 +38,19 @@ class Event(models.Model):
     time = models.TimeField(auto_now=False, auto_now_add=False,)
     description = models.TextField(max_length=500)
     date = models.DateField(auto_now=False, auto_now_add=False,)
+
 # Creates poll form within events 
 class Poll(models.Model):
     location_name = models.CharField(max_length=200)
     count = models.IntegerField(default=0)
 
     def __str__(self):
-        return '%s: %d pollss' % (self.location_name, self.count)
+        return '%s: %d polls' % (self.location_name, self.count)
 
     @classmethod
-    def bulk_poll(cls, location_name):
+    def bulk_poll(cls, location_names):
         with transaction.atomic():
-            for location_name in location_name:
+            for location_name in location_names:
                 if len(location_name) == 0:
                     continue
 

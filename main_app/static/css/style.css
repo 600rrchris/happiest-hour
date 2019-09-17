@@ -12,6 +12,10 @@
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { ... }
 
+/* 
+Google Fonts: 
+font-family: 'Bitter', serif;
+font-family: 'Source Sans Pro', sans-serif; */
 .navbar.navbar-expand-lg.navbar-light.bg-warning
 {
 background: #155263 !important;
@@ -31,8 +35,10 @@ height: 150px;
 .form-control{
     width: 50%;
   }
+  
 body {
 color: #FFFFF0;
+font-family: 'Bitter', 'Source Sans Pro', sans-serif, serif;
 }
 
 form {   
