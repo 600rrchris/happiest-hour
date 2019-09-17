@@ -4,17 +4,18 @@
 
 <h1>All Events</h1>
 
+
+{% for event in events %}
+<a href="{% url 'detail' event.id %}"></a>
 <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Moonshine Grill</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="{% url 'events_update' %}" class="card-link">Edit</a>
-          <a href="{% url 'events_details' %}" class="card-link">Details</a>
+          <h5 class="card-title">{{ event.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ group.name }}</h6>
+          <p class="card-text">{{ description.name }}</p>
         </div>
 </div>
 
-
+{% endfor %}
 
 
 {% endblock %}
