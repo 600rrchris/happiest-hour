@@ -21,7 +21,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
       {% if user.is_authenticated %}
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item">
       <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups' %}">All Groups</a>
       </li>
@@ -35,7 +35,7 @@
       <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_new' %}">Add Event</a>
       </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-5">
         <li class="nav-item">
             <a style="color:#FFFFF0;" class="nav-link" href="{% url 'logout' %}">Log Out</a> 
         </li>
