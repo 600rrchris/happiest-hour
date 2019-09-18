@@ -12,9 +12,7 @@
           <!-- <p class="card-text">Some quick example text to build on the card title</p> -->
 
           <a style="color:#FFFFF0;" class="card-link" href="/events/new">Create Event</a>
-          <a style="color:#FFFFF0;" class="card-link" href="#">Edit Group</a>
-          <a style="color:#FFFFF0;" class="card-link" href="#">Delete Group</a> 
-          <a href="/events/new" class="card-link">Create Event</a>
+          <a style="color:#FFFFF0;" class="card-link" href="{% url 'groups_update' group.id %}">Edit Group</a>
           <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups_delete' group.id %}">Delete</a> 
 
         </div>
