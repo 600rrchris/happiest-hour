@@ -34,6 +34,7 @@ def groups_index(request):
     groups = Group.objects.all()
     return render(request, 'groups/index.html', {'groups' : groups})
 
+
 @login_required
 def groups_new(request):
     return render(request, 'groups/new.html')
@@ -65,15 +66,16 @@ class GroupCreate(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
-    success_url = '/groups/' 
+    success_url = '/groups/index' 
 
 class GroupDelete(LoginRequiredMixin, DeleteView):
     model = Group
-    success_url = '/groups/'
-
+    success_url = '/groups/index'
+    
 class GroupUpdate(LoginRequiredMixin, UpdateView):
     model = Group
     fields = '__all__'
+    success_url = '/groups/index'
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
