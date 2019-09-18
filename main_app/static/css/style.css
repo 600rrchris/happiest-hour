@@ -25,7 +25,7 @@ font-size: 18px;
 }
 .main {
 background: #ffc93c;
-height: 500px;
+height: 600px;
 padding: 10px;
 }
 .footer {
@@ -45,14 +45,38 @@ color: #FFFFF0;
 font-family: 'Bitter', 'Source Sans Pro', sans-serif, serif;
 }
 
+label {
+  color: #FFFFF0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  width: 120px;
+  display: grid;
+  justify-content: left;
+  font-weight: bold;
+}
+
+td {
+width: 50px;
+display: inline-block;
+color: purple;
+}
+
+input, select{
+  width: 379px;
+  margin: 2px;
+}
+
 form {   
 display: inline-block; 
 text-align: center;
-border: 1px solid;
+border: 1px solid; 
 padding: 20px;
 border-radius: 2px;
 box-shadow: 0px 5px #464646;
 margin: 10px;
+color: #464646;
+width: 550px;
 }
 
 /* sign in button */
