@@ -1,29 +1,7 @@
-Skip to content
-Search or jump to…
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@600rrchris 
-1
-00600rrchris/wishlist
- Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights Settings
-wishlist/main_app/templates/main_app/item_confirm_delete.html
-@600rrchris 600rrchris first
-4888878 yesterday
-20 lines (18 sloc)  600 Bytes
-  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
         <h1>Delete Item</h1>
 
         <h4>Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
@@ -33,17 +11,5 @@ wishlist/main_app/templates/main_app/item_confirm_delete.html
           <input type="submit" value="Yes - Delete!" class="btn">
           <a href="{% url 'events_delete' event.id %}">Cancel</a>
         </form>
-</body>
-</html>
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
+{% endblock %}
