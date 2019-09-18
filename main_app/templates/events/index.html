@@ -9,8 +9,10 @@
 <a href="{% url 'detail' event.id %}"></a>
 <div class="card">
         <div class="card-body">
-          <h5 class="card-title">{{ event.name }}</h5>
+          <h5 class="card-title">{{ event.title }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ group.name }}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">{{ event.time }}</h6>
           <p class="card-text">{{ event.description }}</p>
         </div>
 </div>
