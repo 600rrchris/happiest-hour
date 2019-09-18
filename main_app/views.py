@@ -65,11 +65,11 @@ class GroupCreate(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
-    success_url = '/groups/' 
+    success_url = '/groups/index/' 
 
 class GroupDelete(LoginRequiredMixin, DeleteView):
     model = Group
-    success_url = '/groups/'
+    success_url = '/groups/index'
 
 class GroupUpdate(LoginRequiredMixin, UpdateView):
     model = Group

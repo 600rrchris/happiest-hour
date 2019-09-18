@@ -12,8 +12,7 @@
           <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
           <!-- <p class="card-text">Some quick example text to build on the card title</p> -->
           <a href="/events/new" class="card-link">Create Event</a>
-          <a href="/groups/<int:pk>/update" class="card-link">Edit Group</a>
-          <a href="/groups/details" class="card-link">Delete Group</a>
+          <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups_delete' group.id %}">Delete</a> 
         </div>
 </div>
 {% endfor %}
