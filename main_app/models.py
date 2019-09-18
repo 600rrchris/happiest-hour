@@ -78,7 +78,7 @@ class Comment(models.Model):
 class Event(models.Model):
     title = models.CharField(max_length=250)
     group = models.ManyToManyField(Group)
-    location = models.URLField(max_length=250)
+    location = models.CharField(max_length=250)
     description = models.TextField(max_length=250)
     date = models.DateTimeField(auto_now=True)
 
