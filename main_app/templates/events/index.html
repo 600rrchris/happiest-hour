@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 
-<h1>All Events</h1>
+<h1 id="allGroupHeading">All Events</h1>
 
 
 {% for event in events %}
@@ -12,10 +12,28 @@
           <h5 class="card-title">{{ event.title }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
           <p class="card-text">{{ event.description }}</p>
+          <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_details' %}">Details</a> 
+          <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_update' %}">Edit</a> 
         </div>
 </div>
 
 {% endfor %}
+<script>
+    $(document).ready(function() {
+     var date_input = $('input[name="date"]'); //our date input has the name "date"
+     var container =
+       $(".bootstrap-iso form").length > 0
+         ? $(".bootstrap-iso form").parent()
+         : "body";
+     var options = {
+       format: "mm/dd/yyyy",
+       container: container,
+       todayHighlight: true,
+       autoclose: true
+     };
+     date_input.datepicker(options);
+   });
+   </script>
 
 
 {% endblock %}
