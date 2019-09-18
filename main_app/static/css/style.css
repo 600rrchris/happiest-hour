@@ -28,7 +28,7 @@ padding-top: 70px;
 }
 .main {
 background: #ffc93c;
-height: 600px;
+height: 800px;
 padding: 10px;
 }
 .footer {
@@ -65,15 +65,12 @@ display: inline-block;
 color: purple;
 }
 
-input, select{
-  width: 379px;
-  margin: 2px;
-}
-
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+input {
+width: 200px;
+}
 /* form {   
 display: inline-block; 
 text-align: center;
@@ -110,9 +107,7 @@ border: 1px solid;
 border-radius: 2px;    
 justify-content: baseline;
 }
-input {
-width: 200px;
-}
+
 
 #allGroupHeading {
   text-align: center;
