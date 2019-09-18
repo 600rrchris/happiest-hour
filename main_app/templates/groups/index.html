@@ -14,6 +14,8 @@
           <a style="color:#FFFFF0;" class="card-link" href="/events/new">Create Event</a>
           <a style="color:#FFFFF0;" class="card-link" href="{% url 'groups_update' group.id %}">Edit Group</a>
           <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups_delete' group.id %}">Delete</a> 
+          <a style="color:#FFFFF0;" class="card-link" href="/groups/{{ group.id }}">Group Details</a>
+
 
         </div>
 </div>
