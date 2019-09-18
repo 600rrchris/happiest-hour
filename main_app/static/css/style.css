@@ -36,6 +36,7 @@ width: 50%;
 }
 .card {
 width: 400px;
+margin: 20px;
 float: none;
 }
 #content {
@@ -95,13 +96,9 @@ width: 550px;
 } */
 
 /* events cards */
-.card {
-  margin: 20px;
-}
-
 .card-body {
 background: #ff9a3c;
-height: 200px;
+height: 220px, auto;
 width: 500px;
 }
 /* sign in button */
