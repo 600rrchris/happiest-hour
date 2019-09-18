@@ -154,3 +154,11 @@ a.card-link {
   padding: 15px;
   color: #FFFFF0;
 }
+
+a.nav-link {
+  font-size: 15px;
+  margin-left: 18px;
+  display: inline;
+  padding: 15px;
+  color: #FFFFF0;
+}
