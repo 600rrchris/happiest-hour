@@ -74,6 +74,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = 'main_app.Account'
+
 WSGI_APPLICATION = 'happiest_hour.wsgi.application'
 
 # Password validation
