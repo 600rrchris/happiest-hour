@@ -45,7 +45,7 @@ float: none;
   
 body {
 color: #FFFFF0;
-font-family: 'Bitter', 'Source Sans Pro', sans-serif, serif;
+font-family: 'Bitter', serif;
 }
 
 label {
@@ -70,6 +70,9 @@ input, select{
   margin: 2px;
 }
 
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 /* form {   
 display: inline-block; 
@@ -109,4 +112,9 @@ justify-content: baseline;
 }
 input {
 width: 200px;
+}
+
+#allGroupHeading {
+  text-align: center;
+  font-size: 40px;
 }
