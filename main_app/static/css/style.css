@@ -58,7 +58,7 @@ display: inline-block;
 select{
   width: 379px;
   margin: 2px;
-color: #464646;
+  color: #464646;
 }
 
 h2 {
@@ -80,6 +80,7 @@ form {
 display: grid;
 justify-content: left;  
 }  
+
 /* form {   
 display: inline-block; 
 text-align: center;
@@ -113,10 +114,18 @@ width: 500px;
   margin: 20px;
   float: none;
   }
+
+#delete {
+text-align: center;  
+justify-content: center;
+}
+
 /* sign in button */
 .btn {
-width: 100px;    
-background: lightgray;   
+width: 200px;    
+height: 50px;
+background: #155263;   
+color: #FFFFF0;
 }
 /* Sign Up form */
 #signup

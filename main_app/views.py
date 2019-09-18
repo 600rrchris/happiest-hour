@@ -40,8 +40,9 @@ def events_new(request):
     return render(request, 'events/new.html')
 
 @login_required
-def events_details(request):
-    return render(request, 'events/details.html')
+def events_details(request, event_id):
+    event = Event.objects.get(id=event_id)
+    return render(request, 'events/details.html', {'event' : event})
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
@@ -68,7 +69,8 @@ def groups_new(request):
     return render(request, 'groups/new.html')
 
 @login_required
-def groups_details(request):
+def groups_details(request, group_id):
+    group = Group.objects.all(id=group_id)
     return render(request, 'groups/details.html')         
 
 class GroupCreate(LoginRequiredMixin, CreateView):
@@ -77,7 +79,7 @@ class GroupCreate(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
-        success_url = '/groups/index/' 
+        success_url = '/groups/index' 
     
 class GroupUpdate(LoginRequiredMixin, UpdateView):
     model = Group
