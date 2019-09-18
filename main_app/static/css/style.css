@@ -83,18 +83,6 @@ input {
 width: 200px;
 }
 
-/* form {   
-display: inline-block; 
-text-align: center;
-border: 1px solid; 
-padding: 20px;
-border-radius: 2px;
-box-shadow: 0px 5px #464646;
-margin: 10px;
-color: #464646;
-width: 550px;
-} */
-
 /* events cards */
 .card-body {
 background: #ff9a3c;
@@ -105,15 +93,10 @@ width: 100px;
 background: lightgray;   
 }
 /* Sign Up form */
-#log {
-/* width: 400px;    */
-/* justify-content: left; */
-}
 #signup
 {
  width: 800px;   
  font-size: 14px;
-/* justify-content: baseline;  */
 text-align: center;
 border: 1px solid; 
 border-radius: 2px;    
