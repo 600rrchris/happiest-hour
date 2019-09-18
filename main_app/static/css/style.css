@@ -62,15 +62,27 @@ label {
 td {
 width: 50px;
 display: inline-block;
-color: purple;
 }
 
 h2 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Bitter', serif;
+  color: #155263;
+  text-align: center;
+  line-height: 42px;
+
 }
+
+h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  margin-left: 15px;
+  line-height: 30px;
+}
+
 input {
 width: 200px;
 }
+
 /* form {   
 display: inline-block; 
 text-align: center;
@@ -112,4 +124,16 @@ justify-content: baseline;
 #allGroupHeading {
   text-align: center;
   font-size: 40px;
+}
+
+a #signupLink {
+  color: green;
+}
+
+a .signupLink {
+  color: green;
+}
+
+a:hover #signupLink {
+  color: #ff9a3c;
 }
