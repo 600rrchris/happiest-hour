@@ -78,6 +78,7 @@ class GroupUpdate(LoginRequiredMixin, UpdateView):
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
+    success_url = '/events/index'
 
 class EventDelete(LoginRequiredMixin, DeleteView):
     model = Event
