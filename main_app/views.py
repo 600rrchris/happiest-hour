@@ -82,7 +82,7 @@ class EventCreate(LoginRequiredMixin, CreateView):
 
 class EventDelete(LoginRequiredMixin, DeleteView):
     model = Event
-    success_url = '/events/'
+    success_url = '/events/index'
 
 class EventUpdate(LoginRequiredMixin, UpdateView):
     model = Event
