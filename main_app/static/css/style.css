@@ -42,9 +42,10 @@ width: 50%;
 width: 400px;
 float: none;
 }
-  
-body {
+#content {
 color: #FFFFF0;
+} 
+body {
 font-family: 'Bitter', serif;
 }
 
