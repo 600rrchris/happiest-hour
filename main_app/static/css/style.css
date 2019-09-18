@@ -24,7 +24,7 @@ padding-top: 70px;
 }
 .main {
 background: #ffc93c;
-height: 600px;
+height: 800px;
 padding: 10px;
 }
 .footer {
@@ -38,9 +38,10 @@ width: 50%;
 width: 400px;
 float: none;
 }
-  
-body {
+#content {
 color: #FFFFF0;
+} 
+body {
 font-family: 'Bitter', serif;
 }
 
@@ -63,6 +64,7 @@ display: inline-block;
 select{
   width: 379px;
   margin: 2px;
+color: #464646;
 }
 
 h2 {
@@ -79,8 +81,7 @@ h4 {
   margin-left: 15px;
   line-height: 30px;
 }
-
-
+  
 /* form {   
 display: inline-block; 
 text-align: center;
@@ -107,22 +108,14 @@ width: 100px;
 background: lightgray;   
 }
 /* Sign Up form */
-#log {
-/* width: 400px;    */
-/* justify-content: left; */
-}
 #signup
 {
  width: 800px;   
  font-size: 14px;
-/* justify-content: baseline;  */
 text-align: center;
 border: 1px solid; 
 border-radius: 2px;    
 justify-content: baseline;
-}
-input {
-width: 200px;
 }
 
 h1 {
