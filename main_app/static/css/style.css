@@ -34,11 +34,6 @@ height: 120px;
 .form-control {
 width: 50%;
 }
-.card {
-width: 400px;
-margin: 20px;
-float: none;
-}
 #content {
 color: #FFFFF0;
 } 
@@ -50,11 +45,9 @@ label {
   color: #FFFFF0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
-  font-weight: 300;
   width: 120px;
   display: grid;
   justify-content: left;
-  font-weight: bold;
 }
 
 td {
@@ -84,7 +77,8 @@ h4 {
 }
 
 form {
-justify-content: center;  
+display: grid;
+justify-content: left;  
 }  
 /* form {   
 display: inline-block; 
@@ -98,12 +92,27 @@ color: #464646;
 width: 550px;
 } */
 
+label {
+  margin: 0 0 0 10px;
+}
+
+input {
+  width: 380px;
+}
+
 /* events cards */
 .card-body {
 background: #ff9a3c;
-height: 220px, auto;
+height: 220px;
 width: 500px;
 }
+
+.card {
+  width: 500px;
+  height: 220px;
+  margin: 20px;
+  float: none;
+  }
 /* sign in button */
 .btn {
 width: 100px;    
@@ -135,10 +144,6 @@ a {
 a:hover {
   color: #FFFFF0;
   text-decoration: none;
-}
-
-label {
-  margin: 10px;
 }
 
 #log {
