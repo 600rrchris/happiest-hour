@@ -3,12 +3,17 @@
 {% load static %}
 
         <h1>Delete Item</h1>
-
-        <h4>Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
-      
-        <form action="" method="POST">
+      <br />
+        <h4 id="delete">Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
+      <br />
+      <br />
+    
+        <form id="delete" action="" method="POST">
           {% csrf_token %}
           <input type="submit" value="Yes - Delete!" class="btn">
+          <br />
+          <br />
+          <br />
           <a href="{% url 'events_delete' event.id %}">Cancel</a>
         </form>
 
