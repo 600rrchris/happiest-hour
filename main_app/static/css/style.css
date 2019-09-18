@@ -32,9 +32,13 @@ padding: 10px;
 background: #155263;
 height: 150px;
 }
-.form-control{
-    width: 50%;
-  }
+.form-control {
+width: 50%;
+}
+.card {
+width: 400px;
+float: none;
+}
   
 body {
 color: #FFFFF0;
