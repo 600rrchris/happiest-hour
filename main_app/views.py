@@ -15,7 +15,8 @@ def home(request):
     return render(request, 'home.html')
 @login_required
 def events_index(request):
-    return render(request, 'events/index.html')
+    events = Event.objects.all()
+    return render(request, 'events/index.html', {'events' : events})
 
 @login_required
 def events_new(request):
@@ -78,6 +79,7 @@ class GroupUpdate(LoginRequiredMixin, UpdateView):
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
+    success_url = '/events/index'
 
 class EventDelete(LoginRequiredMixin, DeleteView):
     model = Event
