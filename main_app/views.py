@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import User, Group, Event, Comment, Poll
-from .forms import PollForm
+from .models import User, Group, Event, Comment
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -24,8 +23,8 @@ def events_new(request):
 def events_details(request):
     return render(request, 'events/details.html')
 
-def events_poll(request):
-    return render(request, 'events/poll.html')
+# def events_poll(request):
+#     return render(request, 'events/poll.html')
 
 @login_required
 def groups_index(request):
@@ -78,7 +77,6 @@ class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
     fields = '__all__'
 
-
 class EventDelete(LoginRequiredMixin, DeleteView):
     model = Event
     success_url = '/events/'
@@ -87,17 +85,3 @@ class EventUpdate(LoginRequiredMixin, UpdateView):
     model = Event
     fields = '__all__'        
 
-
-def index(request):
-    if request.method == 'POST':
-        form = PollForm(request.POST)
-        if form.is_valid():
-            chosen_locations_options = form.cleaned_data.get('chosen_locations_options', [])
-            other_location_name = form.cleaned_data.get('other_location_name', '')
-            Poll.bulk_poll(chosen_locations_options + [other_location_name])
-        message = 'Thank You For Your Contribution!'
-    elif request.method == 'GET':
-        message = ''
-
-    form = PollForm()
-    return render(request, 'events/poll.html', {'form': form, 'message': message})
