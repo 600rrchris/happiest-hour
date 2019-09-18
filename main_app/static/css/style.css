@@ -62,7 +62,6 @@ label {
 td {
 width: 50px;
 display: inline-block;
-color: purple;
 }
 
 input, select{
@@ -71,8 +70,21 @@ input, select{
 }
 
 h2 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Bitter', serif;
+  color: #155263;
+  text-align: center;
+  line-height: 42px;
+
 }
+
+h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  margin-left: 15px;
+  line-height: 30px;
+}
+
+
 
 /* form {   
 display: inline-block; 
@@ -117,4 +129,16 @@ width: 200px;
 #allGroupHeading {
   text-align: center;
   font-size: 40px;
+}
+
+a #signupLink {
+  color: green;
+}
+
+a .signupLink {
+  color: green;
+}
+
+a:hover #signupLink {
+  color: #ff9a3c;
 }
