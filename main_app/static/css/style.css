@@ -89,6 +89,8 @@ width: 200px;
 /* events cards */
 .card-body {
 background: #ff9a3c;
+height: 200px;
+width: 500px;
 }
 /* sign in button */
 .btn {
