@@ -10,9 +10,9 @@ from main_app.forms import SignUpForm
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
-# Create your views here.
 def home(request):
     return render(request, 'home.html')
+
 @login_required
 def events_index(request):
     events = Event.objects.all()
@@ -66,7 +66,6 @@ class GroupCreate(LoginRequiredMixin, CreateView):
         form.instance.owner = self.request.user
         return super().form_valid(form)
     success_url = '/groups/' 
-
 
 class GroupDelete(LoginRequiredMixin, DeleteView):
     model = Group

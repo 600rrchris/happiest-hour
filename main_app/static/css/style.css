@@ -12,10 +12,6 @@
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { ... }
 
-/* 
-Google Fonts: 
-font-family: 'Bitter', serif;
-font-family: 'Source Sans Pro', sans-serif; */
 .navbar.navbar-expand-lg.navbar-light.bg-warning
 {
 background: #155263 !important;
@@ -33,7 +29,7 @@ padding: 10px;
 }
 .footer {
 background: #155263;
-height: 150px;
+height: 120px;
 }
 .form-control {
 width: 50%;
@@ -64,7 +60,7 @@ width: 50px;
 display: inline-block;
 }
 
-input, select{
+select{
   width: 379px;
   margin: 2px;
 }
@@ -85,7 +81,6 @@ h4 {
 }
 
 
-
 /* form {   
 display: inline-block; 
 text-align: center;
@@ -99,6 +94,10 @@ width: 550px;
 } */
 
 /* events cards */
+.card {
+  margin: 20px;
+}
+
 .card-body {
 background: #ff9a3c;
 }
@@ -126,19 +125,35 @@ input {
 width: 200px;
 }
 
-#allGroupHeading {
+h1 {
   text-align: center;
   font-size: 40px;
 }
 
-a #signupLink {
-  color: green;
+a {
+  color: #155263;
+  font-size: 25px;
+  display: grid;
+  justify-content: center;
 }
 
-a .signupLink {
-  color: green;
+a:hover {
+  color: #FFFFF0;
+  text-decoration: none;
 }
 
-a:hover #signupLink {
-  color: #ff9a3c;
+label {
+  margin: 10px;
+}
+
+#log {
+  border: 1px solid black;
+  width: 400px;
+  text-align: left;
+}
+
+a.card-link {
+  font-size: 15px;
+  margin-left: 18px;
+  display: inline;
 }
