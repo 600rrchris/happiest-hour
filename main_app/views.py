@@ -28,7 +28,8 @@ def events_details(request):
 
 @login_required
 def groups_index(request):
-    return render(request, 'groups/index.html')
+    groups = Group.objects.all()
+    return render(request, 'groups/index.html', {'groups' : groups})
 
 @login_required
 def groups_new(request):
@@ -57,8 +58,12 @@ def signup(request):
 
 class GroupCreate(LoginRequiredMixin, CreateView):
     model = Group
-    fields = ['users', 'name']
-    success_url = '/groups/'  
+    fields = ['name', 'users']
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
+    success_url = '/groups/' 
+
 
 class GroupDelete(LoginRequiredMixin, DeleteView):
     model = Group
