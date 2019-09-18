@@ -14,9 +14,9 @@
           <h6 class="card-title">{{ event.location }}</h6>
           <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
           <p class="card-text">{{ event.description }}</p>
-          <a href="/events/new" class="card-link">Create Event</a>
-          <a href="/groups/<int:pk>/update" class="card-link">Edit Group</a>
-          <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_delete' event.id %}">Delete</a> 
+          <a style="color:#FFFFF0;" class="card-link" href="#">Event Details</a>
+          <a style="color:#FFFFF0;" class="card-link" href="{% url 'events_update' event.id %}">Edit Event</a>
+          <a style="color:#FFFFF0;" class="card-link" href="{% url 'events_delete' event.id %}">Delete Event</a> 
         </div>
 </div>
 

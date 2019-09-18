@@ -10,6 +10,23 @@ from main_app.forms import SignUpForm
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
+def users(request):
+    return render(request, 'users.html')
+  
+def signup(request):
+  error_message = ''
+  if request.method == 'POST':
+    form = SignUpForm(request.POST)
+    if form.is_valid():
+      user = form.save()
+      login(request, user)
+      return redirect('home')
+    else:
+      error_message = 'Invalid sign up - try again'
+  form = SignUpForm()
+  context = {'form': form, 'error_message': error_message}
+  return render(request, 'registration/signup.html', context)
+
 def home(request):
     return render(request, 'home.html')
 
@@ -26,9 +43,20 @@ def events_new(request):
 def events_details(request):
     return render(request, 'events/details.html')
 
-# def events_poll(request):
-#     return render(request, 'events/poll.html')
+class EventCreate(LoginRequiredMixin, CreateView):
+    model = Event
+    fields = '__all__'
+    success_url = '/events/index'
+    
+class EventUpdate(LoginRequiredMixin, UpdateView):
+    model = Event
+    fields = '__all__'  
 
+class EventDelete(LoginRequiredMixin, DeleteView):
+    model = Event
+    success_url = '/events/index'
+
+  
 @login_required
 def groups_index(request):
     groups = Group.objects.all()
@@ -42,49 +70,19 @@ def groups_new(request):
 def groups_details(request):
     return render(request, 'groups/details.html')         
 
-def users(request):
-    return render(request, 'users.html')
-
-def signup(request):
-  error_message = ''
-  if request.method == 'POST':
-    form = SignUpForm(request.POST)
-    if form.is_valid():
-      user = form.save()
-      login(request, user)
-      return redirect('home')
-    else:
-      error_message = 'Invalid sign up - try again'
-  form = SignUpForm()
-  context = {'form': form, 'error_message': error_message}
-  return render(request, 'registration/signup.html', context)
-
 class GroupCreate(LoginRequiredMixin, CreateView):
     model = Group
     fields = ['name', 'users']
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
-    success_url = '/groups/index/' 
-
-class GroupDelete(LoginRequiredMixin, DeleteView):
-    model = Group
-    success_url = '/groups/index'
-
+        success_url = '/groups/index/' 
+    
 class GroupUpdate(LoginRequiredMixin, UpdateView):
     model = Group
     fields = '__all__'
-
-class EventCreate(LoginRequiredMixin, CreateView):
-    model = Event
-    fields = '__all__'
-    success_url = '/events/index'
-
-class EventDelete(LoginRequiredMixin, DeleteView):
-    model = Event
-    success_url = '/events/index'
-
-class EventUpdate(LoginRequiredMixin, UpdateView):
-    model = Event
-    fields = '__all__'        
-
+    success_url = '/groups/index'
+    
+class GroupDelete(LoginRequiredMixin, DeleteView):
+    model = Group
+    success_url = '/groups/index'

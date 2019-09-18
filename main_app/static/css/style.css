@@ -148,4 +148,6 @@ a.card-link {
   font-size: 15px;
   margin-left: 18px;
   display: inline;
+  padding: 15px;
+  color: #FFFFF0;
 }

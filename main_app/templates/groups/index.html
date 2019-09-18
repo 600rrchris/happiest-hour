@@ -8,11 +8,15 @@
 <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{ group.name }}</h5>
-          <br>
           <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
           <!-- <p class="card-text">Some quick example text to build on the card title</p> -->
+
+          <a style="color:#FFFFF0;" class="card-link" href="/events/new">Create Event</a>
+          <a style="color:#FFFFF0;" class="card-link" href="#">Edit Group</a>
+          <a style="color:#FFFFF0;" class="card-link" href="#">Delete Group</a> 
           <a href="/events/new" class="card-link">Create Event</a>
           <a style="color:#FFFFF0;" class="nav-link" href="{% url 'groups_delete' group.id %}">Delete</a> 
+
         </div>
 </div>
 {% endfor %}
