@@ -3,20 +3,25 @@
 {% load static %}
 
 <h1>All Events</h1>
+<hr>
 
 <div class="row"> 
 {% for event in events %}
 <div class="col m-1">
 <div class="card">
         <div class="card-body">
-          <h3 class="card-title">{{ event.title }}</h3>
+          <h5 class="card-title">{{ event.title }}</h5>
+          <hr>
           <h5 class="card-title">{{ event.group }}</h5>
           <h6 class="card-title">{{ event.location }}</h6>
           <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
           <p class="card-text">{{ event.description }}</p>
-          <a style="color:#FFFFF0;" class="nav-link" href="/events/{{ event.id }}">Event Details</a>
+          <i class="material-icons">menu</i>
+          <a style="color:#d55e00;" class="nav-link" href="/events/{{ event.id }}">Event Details</a>
+          <i class="material-icons">create</i>
           <a style="color:#d55e00;" class="nav-link" href="{% url 'events_update' event.id %}">Edit Event</a>
-          <a style="color:#d55e00;" class="nav-link" href="{% url 'events_delete' event.id %}">Delete Event</a> 
+          <i class="material-icons">delete_sweep</i>
+          <a style="color:#d55e00;" class="nav-link" href="{% url 'events_delete' event.id %}">Delete</a> 
         </div>
 </div>
 </div>

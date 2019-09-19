@@ -3,20 +3,23 @@
 {% load static %}
 
 <h1>All Groups</h1>
-
+<hr>
 <div class="row"> 
   {% for group in groups %}
   <div class="col m-1">
   <div class="card">
         <div class="card-body">
-          <h3 class="card-title">{{ group.name }}</h3>
+
+          <h5 class="card-title">{{ group.name }}</h3>
+          <hr>
           <h6 class="card-text">{{ group.description }}</h6> 
-          <br>
+          <br />
           <p class="card-text">{{ group.users }}</p> 
           <br />
-          <br>
-              <a style="color:#FFFFF0;" class="nav-link" href="/groups/{{ group.id }}">Group Details</a>
-              <a style="color:#d55e00;" class="nav-link" href="/events/new">Create Event</a>
+          <i class="material-icons">menu</i>
+          <a style="color:#d55e00;" class="nav-link" href="/groups/{{ group.id }}">Group Details</a></span>
+          <i class="material-icons">add</i>
+              <a style="color:#d55e00;" class="nav-link" href="/events/new">Add Event</a></span>
         </div>
       </div>
       </div>

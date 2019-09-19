@@ -20,11 +20,8 @@ html {
 background: #155263 !important;
 }
 li.nav-item {
-  padding: 8px;
+  padding-top: 70px;
   text-align: right;
-}
-.nav-item {
-padding-top: 70px;    
 }
 .main {
 background: #ffc93c;
@@ -43,15 +40,25 @@ width: 50%;
 .card {
   width: 500px;
   height: 220px;
+  
   margin: 20px;
   float: none;
   }
 
 .card-body {
-background: #ff9a3c;
+background: linear-gradient(110deg, #FFFFF0 60%, #ffed4b9a 60%);
 height: 220px, auto;
 width: 500px;
 padding: 20px 0 0 30px;
+border: 5px solid #ff6f3c;
+border-radius: 5px;
+box-shadow: 0 5px 8px #464646;
+}
+#home {
+  text-align: justify;
+}
+i.material-icons {
+color: #d55e00;
 }
 
 a.card-link {
@@ -108,7 +115,6 @@ h1 {
 h2 {
   font-family: 'Bitter', serif;
   color: #155263;
-  text-align: center;
   line-height: 42px;
 
 }
@@ -178,7 +184,7 @@ a {
   color: #155263;
   font-size: 25px;
   display: grid;
-  justify-content: center;
+  text-align: end;
 }
 
 a:hover {
