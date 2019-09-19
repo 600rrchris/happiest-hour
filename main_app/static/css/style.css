@@ -67,6 +67,14 @@ a.nav-link {
   padding-right: 50px;
 }
 
+a.card-link:hover {
+  color: #d55e00
+}
+
+a.nav-link:hover {
+  color: #FFFFF0
+}
+
 #content {
 color: #FFFFF0;
 } 
