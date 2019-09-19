@@ -34,6 +34,7 @@ def home(request):
 @login_required
 def events_index(request):
     events = Event.objects.all()
+    group = Group.objects.all()
     return render(request, 'events/index.html',{'events' : events})
 
 @login_required
