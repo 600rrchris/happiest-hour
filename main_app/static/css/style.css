@@ -12,6 +12,9 @@
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { ... }
 
+html {
+  height: 100%;
+}
 .navbar.navbar-expand-lg.navbar-light.bg-warning
 {
 background: #155263 !important;
@@ -24,7 +27,8 @@ padding-top: 70px;
 }
 .main {
 background: #ffc93c;
-height: 800px;
+min-height: 800px;
+height: 100%;
 padding: 10px;
 }
 .footer {
@@ -38,6 +42,18 @@ width: 50%;
 width: 400px;
 margin: 20px;
 float: none;
+}
+.card-body {
+background: #ff9a3c;
+height: 220px, auto;
+width: 500px;
+padding: 20px 0 10px 30px;
+}
+a.card-link {
+  font-size: 16px;
+  display: inline;
+  padding: 15px;
+  color: #FFFFF0;
 }
 #content {
 color: #FFFFF0;
@@ -83,12 +99,7 @@ h4 {
   line-height: 30px;
 }
 
-/* events cards */
-.card-body {
-background: #ff9a3c;
-height: 220px, auto;
-width: 500px;
-}
+
 #delete {
 text-align: center;  
 justify-content: center;
@@ -138,10 +149,3 @@ label {
   text-align: left;
 }
 
-a.card-link {
-  font-size: 15px;
-  margin-left: 18px;
-  display: inline;
-  padding: 15px;
-  color: #FFFFF0;
-}
