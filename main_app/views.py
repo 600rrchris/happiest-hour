@@ -42,7 +42,7 @@ def events_new(request):
 @login_required
 def events_details(request, event_id):
     event = Event.objects.get(id=event_id)
-    return render(request, 'events/details.html', {'event' : event})
+    return render(request, 'events/details.html',{'event' : event})
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
@@ -71,11 +71,11 @@ def groups_new(request):
 @login_required
 def groups_details(request, group_id):
     group = Group.objects.get(id=group_id)
-    return render(request, 'groups/details.html', {'group' : group})         
+    return render(request, 'groups/details.html', {'group': group})         
 
 class GroupCreate(LoginRequiredMixin, CreateView):
     model = Group
-    fields = ['name', 'users']
+    fields = ['name', 'users', 'description']
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
