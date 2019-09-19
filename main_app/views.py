@@ -75,10 +75,10 @@ def groups_details(request, group_id):
 class GroupCreate(LoginRequiredMixin, CreateView):
     model = Group
     fields = ['name', 'users', 'description']
-    # def form_valid(self, form):
-        # form.instance.owner = self.request.user
-        # return super().form_valid(form)
-    success_url = '/groups/index' 
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
+        success_url = '/groups/index' 
     
 class GroupUpdate(LoginRequiredMixin, UpdateView):
     model = Group

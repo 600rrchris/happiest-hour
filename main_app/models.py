@@ -68,7 +68,7 @@ class Group(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('details', kwargs={'group_id': self.id})
+        return reverse('groups_details', kwargs={'group_id': self.id})
     
 
 class Comment(models.Model):
