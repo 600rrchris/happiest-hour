@@ -9,10 +9,12 @@
   <div class="col m-1">
   <div class="card">
         <div class="card-body">
-          <h5 class="card-title">{{ group.name }}</h5>
+
+          <h5 class="card-title">{{ group.name }}</h3>
           <hr>
-          <p class="card-text">{{ group.description }}</p> 
+          <h6 class="card-text">{{ group.description }}</h6> 
           <br />
+          <p class="card-text">{{ group.users }}</p> 
           <br />
           <i class="material-icons">menu</i>
           <a style="color:#d55e00;" class="nav-link" href="/groups/{{ group.id }}">Group Details</a></span>
