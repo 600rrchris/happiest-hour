@@ -2,15 +2,15 @@
 {% block content %}
 {% load static %}
 
-    <h1>Add An Event</h1>
-    <form action="" class="form"  method="post">
+    <form class="create" action="" class="form"  method="post">
+        <h1>Add An Event</h1>
         {% csrf_token %}
-        <table>
-        {{ form.as_table }}
-        </table>      
-        <input type="submit" value="Submit!" class="btn">
-      </form>
+        {{ form.as_table }}    
+        <div class="submit">
+            <input type="submit" value="Submit!" class="btn">
+        </div>
 
+    </form>
 
 {% endblock %}
 

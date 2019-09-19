@@ -186,3 +186,20 @@ a:hover {
   display: inline;
   padding-top: 100px;
 }
+
+form.login {
+  display: grid;
+  justify-content: center;
+}
+
+form.login, form.create, input.btn, input#addevent {
+  display: grid;
+  justify-content: center;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
