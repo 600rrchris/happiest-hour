@@ -75,8 +75,7 @@ class Comment(models.Model):
     user = models.ManyToManyField(Account)
     content = models.TextField(max_length=250)
     
-    
-    
+       
     
 class Event(models.Model):
     title = models.CharField(max_length=250)
