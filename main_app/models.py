@@ -62,6 +62,7 @@ class Account(AbstractBaseUser):
 class Group(models.Model):
     name = models.CharField(max_length=250)
     users = models.ManyToManyField(Account)
+    description = models.TextField(max_length=250)
 
     def __str__(self):
         return self.name
