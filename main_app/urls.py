@@ -11,6 +11,7 @@ urlpatterns = [
     path('events/<int:event_id>/', views.events_details, name='events_details'),
     path('events/<int:pk>/update/', views.EventUpdate.as_view(), name='events_update'),
     path('events/<int:pk>/delete/', views.EventDelete.as_view(), name='events_delete'),
+    path('events/<int:event_id>/comments/', views.events_comments, name='events_comments'),
 
     path('groups/index', views.groups_index, name='groups_index'),
     path('groups/new', views.GroupCreate.as_view(), name='groups_new'),
