@@ -2,15 +2,13 @@
 {% block content %}
 {% load static %}
 
-
-  <h1>Add Group</h1>
-    <form action="" method="post">
+    <form class="create"  action="" method="post">
+      <h1>Add Group</h1>
       {% csrf_token %}
-        <table>
           {{ form.as_table }}
-        </table>
-        <br />
-        <input type="submit" value="Submit!" class="btn">
+          <div class="submit">
+              <input type="submit" value="Submit!" class="btn">
+          </div>
       </form>
 
 {% endblock %}
