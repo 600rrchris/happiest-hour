@@ -9,10 +9,12 @@
         <a href="{% url 'events_index'%}"></a>
         <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">{{ event.title }}</h3>
-                  <h6 class="card-title">{{ event.group }}</h6>
+                  <h3 class="card-title">{{ event.title }}</h3>
+                    {% for group in event.group.all %}
+                    <h6 class="card-title">{{ group.name }}</h6>
+                         {% endfor %}
                   <h6 class="card-title">{{ event.location }}</h6>
-                  <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
+                  <h6 class="card-title">{{ event.date }}</h6>
                   <p class="card-text">{{ event.description }}</p>
                 
                   <i class="material-icons">create</i>
