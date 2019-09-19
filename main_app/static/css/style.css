@@ -19,8 +19,9 @@ html {
 {
 background: #155263 !important;
 }
-a.nav-link {  
-font-size: 18px;
+li.nav-item {
+  padding: 8px;
+  text-align: right;
 }
 .nav-item {
 padding-top: 70px;    
@@ -57,14 +58,13 @@ a.card-link {
   font-size: 16px;
   display: inline;
   padding: 15px;
-  color: #FFFFF0;
 }
 
 a.nav-link {
   font-size: 16px;
   display: inline;
-  padding: 15px;
-  color: #FFFFF0;
+  padding-left: 0;
+  padding-right: 50px;
 }
 
 #content {
@@ -179,4 +179,10 @@ a:hover {
   border: 1px solid black;
   width: 400px;
   text-align: left;
+}
+
+.card-body-links {
+  margin-top: 200px;
+  display: inline;
+  padding-top: 100px;
 }
