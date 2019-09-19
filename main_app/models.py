@@ -81,7 +81,7 @@ class Event(models.Model):
     group = models.ManyToManyField(Group)
     location = models.CharField(max_length=250)
     description = models.TextField(max_length=250)
-    date = models.DateTimeField(auto_now=True)
+    date = models.DateTimeField(auto_now=False)
 
 
 # Creates poll form within events 

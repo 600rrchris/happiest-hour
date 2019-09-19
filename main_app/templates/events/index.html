@@ -15,7 +15,7 @@
           <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
           <p class="card-text">{{ event.description }}</p>
           <a style="color:#FFFFF0;" class="nav-link" href="/events/{{ event.id }}">Event Details</a>
-          <a style="color:#FFFFF0;" class="nav-link" href="{% url 'events_update' event.id %}">Edit Event</a>
+          <a style="color:#d55e00;" class="nav-link" href="{% url 'events_update' event.id %}">Edit Event</a>
           <a style="color:#d55e00;" class="nav-link" href="{% url 'events_delete' event.id %}">Delete Event</a> 
         </div>
 </div>

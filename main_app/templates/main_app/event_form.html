@@ -3,13 +3,16 @@
 {% load static %}
 
     <form class="create" action="" class="form"  method="post">
+      <!-- Not adding in Event title -->
       {% if object %}
         <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
       {% else %}
         <h1>Add Event</h1>
         {% endif %}
         {% csrf_token %}
-        {{ form.as_table }}    
+        {{ form.as_table }} 
+        <p> Date & Time must be in the following format:</p>
+        <p> yyyy-mm-dd hh:mm:ss</p>
         <div class="submit">
             <input type="submit" value="Submit!" class="btn">
         </div>
