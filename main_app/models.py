@@ -72,7 +72,7 @@ class Group(models.Model):
     
 
 class Comment(models.Model):
-    user = models.ManyToManyField(Account)
+    account = models.ManyToManyField(Account)
     content = models.TextField(max_length=250)
     
     

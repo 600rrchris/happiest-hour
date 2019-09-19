@@ -54,8 +54,10 @@
                               <span class="text-muted pull-right">
                                   <small class="text-muted">Time</small>
                               </span>
-                              
-                              <strong class="text-success">@ {{ comment.user }}</strong>
+                              <p>@{{ user.username }}</p>
+                              <p> last login{{ user.last_login }} </p>
+                              <p> Am I online: {{ user.is_active }} </p>
+                              <p>date joined{{ user.date_joined }}</p>
                               <p>
                                     {{ comment.content }}
                                     {{ comment.id }}

@@ -45,9 +45,10 @@ def events_new(request):
 def events_details(request, event_id):
     event = Event.objects.get(id=event_id)
     comments = Comment.objects.all()
+    user = request.user
     comments_form = CommentForm()
     return render(request, 'events/details.html',{'event' : event, 
-    'comments_form' : comments_form, 'comments': comments
+    'comments_form' : comments_form, 'comments': comments, 'user': user
     })
 
 @login_required
