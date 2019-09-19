@@ -19,6 +19,10 @@ html {
 {
 background: #155263 !important;
 }
+li.nav-item {
+  padding: 8px;
+  text-align: right;
+}
 a.nav-link {  
 font-size: 18px;
 }
