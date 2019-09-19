@@ -75,7 +75,7 @@ font-family: 'Bitter', serif;
 }
 
 label {
-  color: #FFFFF0;
+  /* color: #d55e00; */
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   width: 120px;
@@ -92,6 +92,9 @@ select{
   width: 379px;
   margin: 2px;
   color: #464646;
+}
+h1 {
+  color: #d55e00;
 }
 
 h2 {
@@ -113,18 +116,6 @@ form {
 display: grid;
 justify-content: left;  
 }  
-
-/* form {   
-display: inline-block; 
-text-align: center;
-border: 1px solid; 
-padding: 20px;
-border-radius: 2px;
-box-shadow: 0px 5px #464646;
-margin: 10px;
-color: #464646;
-width: 550px;
-} */
 
 label {
   margin: 0 0 0 10px;
@@ -150,14 +141,26 @@ color: #FFFFF0;
 /* Sign Up form */
 #signup
 {
- width: 800px;   
+ width: 900px;   
  font-size: 14px;
 text-align: center;
-border: 1px solid; 
-border-radius: 2px;    
+border: 5px solid #155263; 
+box-shadow: 5px 5px 10px #464646;
+border-radius: 6px;    
 justify-content: baseline;
+padding: 0;
 }
-
+#signform {  
+background: #c6d2d2;
+border-radius: 2px;
+margin-left: -16px;
+margin-right: 15px;
+}
+#log {
+  width: 400px;
+  text-align: left;
+  margin-bottom: 8px;
+}
 h1 {
   text-align: center;
   font-size: 40px;
@@ -174,13 +177,6 @@ a:hover {
   color: #FFFFF0;
   text-decoration: none;
 }
-
-#log {
-  border: 1px solid black;
-  width: 400px;
-  text-align: left;
-}
-
 .card-body-links {
   margin-top: 200px;
   display: inline;
