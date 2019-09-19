@@ -40,8 +40,9 @@ def events_new(request):
     return render(request, 'events/new.html')
 
 @login_required
-def events_details(request):
-    return render(request, 'events/details.html')
+def events_details(request, event_id):
+    event = Event.objects.get(id=event_id)
+    return render(request, 'events/details.html',{'event' : event})
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
