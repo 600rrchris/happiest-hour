@@ -19,8 +19,9 @@ html {
 {
 background: #155263 !important;
 }
-a.nav-link {  
-font-size: 18px;
+li.nav-item {
+  padding: 8px;
+  text-align: right;
 }
 .nav-item {
 padding-top: 70px;    
@@ -38,23 +39,34 @@ height: 120px;
 .form-control {
 width: 50%;
 }
+
 .card {
-width: 400px;
-margin: 20px;
-float: none;
-}
+  width: 500px;
+  height: 220px;
+  margin: 20px;
+  float: none;
+  }
+
 .card-body {
 background: #ff9a3c;
 height: 220px, auto;
 width: 500px;
 padding: 20px 0 10px 30px;
 }
+
 a.card-link {
   font-size: 16px;
   display: inline;
   padding: 15px;
-  color: #FFFFF0;
 }
+
+a.nav-link {
+  font-size: 16px;
+  display: inline;
+  padding-left: 0;
+  padding-right: 50px;
+}
+
 #content {
 color: #FFFFF0;
 } 
@@ -66,11 +78,9 @@ label {
   color: #FFFFF0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
-  font-weight: 300;
   width: 120px;
   display: grid;
   justify-content: left;
-  font-weight: bold;
 }
 
 td {
@@ -99,12 +109,38 @@ h4 {
   line-height: 30px;
 }
 
+form {
+display: grid;
+justify-content: left;  
+}  
+
+/* form {   
+display: inline-block; 
+text-align: center;
+border: 1px solid; 
+padding: 20px;
+border-radius: 2px;
+box-shadow: 0px 5px #464646;
+margin: 10px;
+color: #464646;
+width: 550px;
+} */
+
+label {
+  margin: 0 0 0 10px;
+}
+
+input {
+  width: 380px;
+}
 
 #delete {
 text-align: center;  
 justify-content: center;
 display: inline-block;
 }
+
+/* sign in button */
 .btn {
 width: 200px;    
 height: 50px;
@@ -139,13 +175,14 @@ a:hover {
   text-decoration: none;
 }
 
-label {
-  margin: 10px;
-}
-
 #log {
   border: 1px solid black;
   width: 400px;
   text-align: left;
 }
 
+.card-body-links {
+  margin-top: 200px;
+  display: inline;
+  padding-top: 100px;
+}
