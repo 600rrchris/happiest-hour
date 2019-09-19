@@ -6,12 +6,11 @@
     <div class="card-body">
       <h5 class="card-title">{{ group.name }}</h5>
       <p class="card-text">{{ group.description }}</p> 
+      <p class="card-text">{{ group.users }}</p> 
+      <p class="card-text">{{ group.user }}</p> 
       <br />
       <br />
-      <a style="color:#FFFFF0;" class="card-link" href="/events/new">Create Event</a>
-      <a style="color:#FFFFF0;" class="card-link" href="{% url 'groups_update' group.id %}">Edit Group</a>
-      <br />
-      <br />
+      <a style="color:#d55e00;" class="nav-link" href="{% url 'groups_update' group.id %}">Edit Group</a>
       <a style="color:#d55e00;" class="nav-link" href="{% url 'groups_delete' group.id %}">Delete</a> 
 
     </div>
