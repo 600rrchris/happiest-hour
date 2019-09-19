@@ -68,8 +68,9 @@ def groups_new(request):
     return render(request, 'groups/new.html')
 
 @login_required
-def groups_details(request):
-    return render(request, 'groups/details.html')         
+def groups_details(request, group_id):
+    group = Group.objects.get(id=group_id)
+    return render(request, 'groups/details.html', {'group': group})         
 
 class GroupCreate(LoginRequiredMixin, CreateView):
     model = Group
