@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
- 
+ <h1>Sign Up</h1>
+
 <div id="signup" class="container">
-  <h1>Sign Up</h1>
   <div class="row">
       <div class="col">
    {% if error_message %}<p>{{ error_message }}</p>{% endif %}
-    <img src={% static "/images/signup.jpg" %} width="300" height="400" title="Come On In Sign" alt="Come On In Sign"></a>
+    <img src={% static "/images/signup.jpg" %} width="370" height="600" title="Come On In Sign" alt="Come On In Sign"></a>
       </div>
-      <div class="col">
+      <div id="signform" class="col">
     <form id="log" method="post" action="{% url 'signup' %}">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" class="btn" value="signup">

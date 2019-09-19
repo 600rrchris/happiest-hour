@@ -150,14 +150,22 @@ color: #FFFFF0;
 /* Sign Up form */
 #signup
 {
- width: 800px;   
+ width: 900px;   
  font-size: 14px;
 text-align: center;
 border: 1px solid; 
 border-radius: 2px;    
 justify-content: baseline;
+padding: 0;
 }
-
+#signform {
+/* background:; */
+}
+#log {
+  width: 400px;
+  text-align: left;
+  margin-bottom: 8px;
+}
 h1 {
   text-align: center;
   font-size: 40px;
@@ -174,13 +182,6 @@ a:hover {
   color: #FFFFF0;
   text-decoration: none;
 }
-
-#log {
-  border: 1px solid black;
-  width: 400px;
-  text-align: left;
-}
-
 .card-body-links {
   margin-top: 200px;
   display: inline;
