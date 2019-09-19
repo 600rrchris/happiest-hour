@@ -8,6 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView
 from main_app.forms import SignUpForm
 from django.contrib.auth import get_user_model
+from .forms import CommentForm
 User = get_user_model()
 
 def users(request):
@@ -42,7 +43,19 @@ def events_new(request):
 @login_required
 def events_details(request, event_id):
     event = Event.objects.get(id=event_id)
-    return render(request, 'events/details.html',{'event' : event})
+    comments_form = CommentForm()
+    return render(request, 'events/details.html',{'event' : event, 
+    'comments_form' : comments_form, 
+    })
+
+@login_required
+def events_comments(request, event_id):
+    form = CommentForm(request.POST)
+    if form.is_valid():
+        new_comment = form.save(commit=False)
+        new_comment.event_id = event_id 
+        new_comment.save()
+    return redirect('events_details', event_id = event_id)       
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event

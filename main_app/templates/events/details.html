@@ -1,10 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+<div class="row">
+<div class="col m-1">
+        <a href="{% url 'events_index'%}"></a>
+        <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ event.title }}</h5>
+                  <h6 class="card-title">{{ event.group }}</h6>
+                  <h6 class="card-title">{{ event.location }}</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
+                  <p class="card-text">{{ event.description }}</p>
+
+                  <a style="color:#FFFFF0;" class="card-link" href="{% url 'events_update' event.id %}">Edit Event</a>
+                  <a style="color:#d55e00;" class="card-link" href="{% url 'events_delete' event.id %}">Delete</a> 
+                </div>
+        </div>
+</div>
+</div>
+
+<div class="col">
+
+    <form action="{% url 'events_comments' event.id %}" class="form"  method="post">
+        {% csrf_token %}
+<table>
+        {{ comments_form.as_p }}    
+</table>
+        <input type="submit" value="Submit!" class="btn">
+ 
+    </form> 
+    <ul>
+        {% if  %}
+    </ul>  
+</div>
 
 
-<!-- Bootstrap Comments widget -->
-<div class="row bootstrap snippets">
+       
+
+
+
+      
+<!-- < Bootstrap Comments widget --> -->
+<!-- <div class="row bootstrap snippets">
   <div class="col-md-6 col-md-offset-2 col-sm-12">
       <div class="comment-wrapper">
           <div class="panel panel-info">
@@ -69,5 +106,6 @@
 
   </div>
 </div>
+</div> --> 
  
 {% endblock %}
