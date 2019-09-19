@@ -5,14 +5,14 @@
     <form class="create" action="" class="form"  method="post">
       <!-- Not adding in Event title -->
       {% if object %}
-        <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
+        <h1>Edit Event <span class="teal-text">{{object.name}}</span></h1>
       {% else %}
         <h1>Add Event</h1>
         {% endif %}
         {% csrf_token %}
         {{ form.as_table }} 
         <p> Date & Time must be in the following format:</p>
-        <p> yyyy-mm-dd hh:mm:ss</p>
+        <p> yyyy-mm-dd hh:mm</p>
         <div class="submit">
             <input type="submit" value="Submit!" class="btn">
         </div>
@@ -37,8 +37,8 @@
      date_input.datepicker(options);
    });
    </script> -->
-<!-- 
-   <script>
+
+   <!-- <script>
       // create a datepicker
       var dateEl = document.getElementById('id_date');
       M.Datepicker.init(dateEl, {

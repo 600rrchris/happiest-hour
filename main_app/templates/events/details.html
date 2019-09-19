@@ -6,14 +6,14 @@
         <a href="{% url 'events_index'%}"></a>
         <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">{{ event.title }}</h5>
+                  <h3 class="card-title">{{ event.title }}</h3>
                   <h6 class="card-title">{{ event.group }}</h6>
                   <h6 class="card-title">{{ event.location }}</h6>
                   <h6 class="card-subtitle mb-2 text-muted">{{ event.date }}</h6>
                   <p class="card-text">{{ event.description }}</p>
 
                   <a style="color:#FFFFF0;" class="card-link" href="{% url 'events_update' event.id %}">Edit Event</a>
-                  <a style="color:#d55e00;" class="card-link" href="{% url 'events_delete' event.id %}">Delete</a> 
+                  <a style="color:#d55e00;" class="card-link" href="{% url 'events_delete' event.id %}">Delete Event</a> 
                 </div>
         </div>
 </div>
