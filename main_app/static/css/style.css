@@ -94,7 +94,7 @@ select{
   color: #464646;
 }
 h1 {
-  color: #d55e00;
+  color: #ff6f3c;
 }
 
 h2 {
@@ -145,7 +145,7 @@ color: #FFFFF0;
  font-size: 14px;
 text-align: center;
 border: 5px solid #155263; 
-box-shadow: 5px 5px 10px #464646;
+box-shadow: 0 5px 10px #464646;
 border-radius: 6px;    
 justify-content: baseline;
 padding: 0;
