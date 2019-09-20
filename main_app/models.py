@@ -4,6 +4,7 @@ from datetime import date
 from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
+
 class MyAccountManager(BaseUserManager):
     def create_user(self, email, username, password=None):
         if not email:
@@ -33,6 +34,7 @@ class MyAccountManager(BaseUserManager):
         user.save(using=self._db)
         return user 
 
+
 class Account(AbstractBaseUser):
     email = models.EmailField(verbose_name="email", max_length=60, unique=True )
     username = models.CharField(max_length=30, unique=True)
@@ -57,7 +59,6 @@ class Account(AbstractBaseUser):
     def has_module_perms(self, app_label):
         return True
 
-    
 
 class Group(models.Model):
     name = models.CharField(max_length=250)
@@ -69,41 +70,19 @@ class Group(models.Model):
 
     def get_absolute_url(self):
         return reverse('groups_details', kwargs={'group_id': self.id})
-    
+
 
 class Comment(models.Model):
     account = models.ManyToManyField(Account)
     content = models.TextField(max_length=250)
-    
-       
-    
+
+
 class Event(models.Model):
     title = models.CharField(max_length=250)
     group = models.ManyToManyField(Group)
     location = models.CharField(max_length=250)
     description = models.TextField(max_length=250)
     date = models.DateTimeField(auto_now=False)
-
-
-# Creates poll form within events 
-class Poll(models.Model):
-    location_name = models.CharField(max_length=200)
-    count = models.IntegerField(default=0)
-
-    def __str__(self):
-        return '%s: %d polls' % (self.location_name, self.count)
-
-    @classmethod
-    def bulk_poll(cls, location_names):
-        with transaction.atomic():
-            for location_name in location_names:
-                if len(location_name) == 0:
-                    continue
-
-                if Poll.objects.filter(location_name=location_name).exists():
-                    Poll.objects.filter(location_name=location_name).update(count=models.F('count') + 1)
-                else:
-                    Poll.objects.create(location_name=location_name, count=1)
 
 
 

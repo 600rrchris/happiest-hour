@@ -206,16 +206,16 @@ a:hover {
   padding-top: 100px;
 }
 
-form.login {
-  display: grid;
-  justify-content: center;
-}
-
-form.login, form.create, input.btn, input#addevent {
+form.login, form.create, input.btn, input#addevent, .submit {
   display: grid;
   justify-content: center;
 }
 #title {
 font-size: 30px;
 color: #155263;
+}
+
+.dateInfo {
+  font-size: 12px;
+  text-align: center;
 }

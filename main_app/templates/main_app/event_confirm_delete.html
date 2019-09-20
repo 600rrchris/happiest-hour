@@ -2,25 +2,24 @@
 {% block content %}
 {% load static %}
 
-        <h1>Delete Item</h1>
-        <hr>
-      <br />
-      <div class="d-flex justify-content-center">
-        <h4 id="delete">Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
-      <br />
-      <br />
-      <br />
+<h1>Delete Item</h1>
+  <hr>  
+  <br />
+  <div class="d-flex justify-content-center">
+    <h4 id="delete">Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div class="d-flex justify-content-center">
+    <form id="delete" action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes - Delete!" class="btn">
     </div>
+    <br />
+    <br />
     <div class="d-flex justify-content-center">
-        <form id="delete" action="" method="POST">
-          {% csrf_token %}
-          <input type="submit" value="Yes - Delete!" class="btn">
-          </div>
-          <br />
-          <br />
-          
-          <div class="d-flex justify-content-center">
-          <a href="{% url 'events_delete' event.id %}">Cancel</a>
-        </form>
-</div>
+    <a href="{% url 'events_delete' event.id %}">Cancel</a>
+    </form>
+  </div>
 {% endblock %}
