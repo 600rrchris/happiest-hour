@@ -26,7 +26,7 @@ li.nav-item {
 }
 .main {
 background: #ffc93c;
-min-height: 650px;
+min-height: 850px;
 height: 100%;
 padding: 10px;
 }
@@ -40,20 +40,21 @@ width: 50%;
 
 .card {
   width: 500px;
-  height: 220px, auto;
+  height: 300px;
   margin: 30px;
   float: none;
   }
 
 .card-body {
 background: linear-gradient(110deg, #FFFFF0 60%, #ffed4b9a 60%);
-height: 220px, auto;
+min-height: 330px;
 width: 500px;
 padding: 20px 0 0 30px;
 border: 5px solid #307e94;
 border-radius: 5px;
 box-shadow: 0 5px 8px #464646;
 }
+
 #home {
   text-align: baseline;
 }
@@ -218,4 +219,9 @@ color: #155263;
 .dateInfo {
   font-size: 12px;
   text-align: center;
+}
+
+div.col.m-1{
+  display: grid;
+  justify-content: center;
 }

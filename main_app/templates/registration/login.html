@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
     
-    <form class="login" method="post" action="{% url 'login' %}">
+    <form class="login" method="post" autocomplete="off" action="{% url 'login' %}">
         <h1>Log In</h1>
         <br />
         {% csrf_token %}
