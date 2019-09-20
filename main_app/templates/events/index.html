@@ -10,7 +10,7 @@
 <div class="col m-1">
 <div class="card">
         <div class="card-body">
-          <h5 class="card-title">{{ event.title }}</h5>
+          <h5 id="title" class="card-title">{{ event.title }}</h5>
           <hr>
           {% for group in event.group.all %}
           <h5 class="card-title">{{ group.name }}</h5>

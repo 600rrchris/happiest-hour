@@ -111,6 +111,8 @@ select{
 }
 h1 {
   color: #ff6f3c;
+  text-align: center;
+  font-size: 40px;
 }
 
 h2 {
@@ -187,10 +189,6 @@ padding: 0 !important;
   text-align: left;
   margin-bottom: 8px;
 }
-h1 {
-  text-align: center;
-  font-size: 40px;
-}
 
 a {
   color: #155263;
@@ -218,26 +216,7 @@ form.login, form.create, input.btn, input#addevent {
   display: grid;
   justify-content: center;
 }
-
-.submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
+#title {
+font-size: 30px;
+color: #155263;
 }
-
-.comment-wrapper .panel-body {
-    max-height:650px;
-    overflow:auto;
-}
-
-.comment-wrapper .media-list .media img {
-    width:64px;
-    height:64px;
-    border:2px solid #e5e7e8;
-}
-
-.comment-wrapper .media-list .media {
-    border-bottom:1px dashed #efefef;
-    margin-bottom:25px;
-} 
