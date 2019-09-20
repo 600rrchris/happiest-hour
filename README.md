@@ -15,9 +15,9 @@ Happiest Hour simplifies organizing a happy hour with your coworkers, planning a
 
 ![Wreframe](../master/images/AllEvents.jpg)
 
-![Wreframe](../master/public/images/CreateEvent.jpg)
+![Wreframe](../master/images/CreateEvent.jpg)
 
-![Wreframe](../master/public/images/Detail.jpg)
+![Wreframe](../master/images/Detail.jpg)
 
 ## Screenshots
 
