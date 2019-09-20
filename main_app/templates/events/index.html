@@ -23,30 +23,12 @@
           <a style="color:#d55e00;" class="nav-link" href="/events/{{ event.id }}">Event Details</a>
           <i class="material-icons">create</i>
           <a style="color:#d55e00;" class="nav-link" href="{% url 'events_update' event.id %}">Edit Event</a>
-          <i class="material-icons">delete_sweep</i>
-          <a style="color:#d55e00;" class="nav-link" href="{% url 'events_delete' event.id %}">Delete</a> 
+
         </div>
 </div>
 </div>
 {% endfor %}
 </div>
-
-<!-- <script>
-    $(document).ready(function() {
-     var date_input = $('input[name="date"]'); //our date input has the name "date"
-     var container =
-       $(".bootstrap-iso form").length > 0
-         ? $(".bootstrap-iso form").parent()
-         : "body";
-     var options = {
-       format: "mm/dd/yyyy",
-       container: container,
-       todayHighlight: true,
-       autoclose: true
-     };
-     date_input.datepicker(options);
-   });
-   </script> -->
 
 
 {% endblock %}
