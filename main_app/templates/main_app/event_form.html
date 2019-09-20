@@ -3,7 +3,6 @@
 {% load static %}
 
     <form class="create" action="" class="form"  method="post">
-      <!-- Not adding in Event title -->
       {% if object %}
         <h1>Edit Event <span class="teal-text">{{object.name}}</span></h1>
       {% else %}
@@ -11,8 +10,10 @@
         {% endif %}
         {% csrf_token %}
         {{ form.as_table }} 
-        <p> Date & Time must be in the following format:</p>
-        <p> yyyy-mm-dd hh:mm</p>
+        <p class="dateInfo"> Date & Time must be in the following format:
+          <br>
+          yyyy-mm-dd hh:mm
+        </p>
         <div class="submit">
             <input type="submit" value="Submit!" class="btn">
         </div>
@@ -20,35 +21,3 @@
     </form>
 
 {% endblock %}
-
-<!-- <script>
-    $(document).ready(function() {
-     var date_input = $('input[name="date"]'); //our date input has the name "date"
-     var container =
-       $(".bootstrap-iso form").length > 0
-         ? $(".bootstrap-iso form").parent()
-         : "body";
-     var options = {
-       format: "mm/dd/yyyy",
-       container: container,
-       todayHighlight: true,
-       autoclose: true
-     };
-     date_input.datepicker(options);
-   });
-   </script> -->
-
-   <!-- <script>
-      // create a datepicker
-      var dateEl = document.getElementById('id_date');
-      M.Datepicker.init(dateEl, {
-        format: 'yyyy-mm-dd',
-        defaultDate: new Date(),
-        setDefaultDate: true,
-        autoClose: true
-      });
-    
-      // initialize the meal select
-      var selectEl = document.getElementById('id_meal');
-      M.FormSelect.init(selectEl);
-    </script> -->
