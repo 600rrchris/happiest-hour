@@ -1,5 +1,5 @@
  /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { ... }
+ @media (max-width: 575.98px) { ... }
 
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
@@ -26,7 +26,7 @@ li.nav-item {
 }
 .main {
 background: #ffc93c;
-min-height: 600px;
+min-height: 610px;
 height: 100%;
 padding: 10px;
 }
@@ -42,7 +42,7 @@ width: 50%;
   width: 500px;
   height: 220px;
   
-  margin: 20px;
+  margin: 30px;
   float: none;
   }
 
@@ -175,6 +175,11 @@ margin-right: 15px;
 text-align: start;
 }
 div#happyLogo.col {
+  padding: 0;
+  margin-left: 20px;
+}
+
+div#joinToday.col {
 padding: 0 !important;
 }
 #log {
@@ -235,4 +240,4 @@ form.login, form.create, input.btn, input#addevent {
 .comment-wrapper .media-list .media {
     border-bottom:1px dashed #efefef;
     margin-bottom:25px;
-}
+} 
