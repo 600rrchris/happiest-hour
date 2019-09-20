@@ -25,43 +25,6 @@ The aim is to promote deaf-friendliness in your community via awareness and feed
 ![image description](../master/public/images/form.jpg)
 
 
-## Pseudocode
-1. Set up Oauth verification 
-
-2.  Set up models with user, post, and review schema.
-
-3. Assign properties within schemas. 
-
-	User properties include:
-	
-		Name
-    	Email
-    	Avatar
-    	Google ID
-	
-	Post properties include:
-	
-		Name
-		Location
-		Review
-	
-	Review properties include:
-	
-
-4. Require models in routes. 
-
-5. Create index view, controller and routes. 
-
-6. Show posts, create and add new post.
-
-6. Set routes to get post put edit and delete.  
-
-7. Set controller to render index. Set controller to render new. Set controller to post new to index. Set controller to get show. Set controller to create post. 
-
-8. Set route to delete selected id. Set controller to delete selected id.
-
-9. Set route to get to edit view. Create edit view. Set controller to get to edit view. Set route to put update on id.
-
 ## User Stories
 
 As a user, I can log in via Google authentication. 
