@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 
-    <form class="create"  action="" method="post">
+    <form class="create" action="" class="form"  method="post" autocomplete="off">
       {% if object %}
         <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
         <hr>
@@ -12,6 +12,7 @@
       {% endif %}
       {% csrf_token %}
           {{ form.as_table }}
+          <br>
           <div class="submit">
               <input type="submit" value="Submit!" class="btn">
           </div>
