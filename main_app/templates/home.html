@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-interval="4000" data-ride="carousel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-interval="3000" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img class="d-block w-100" src={% static "/images/friends.jpg" %} alt="First slide">
@@ -57,9 +57,16 @@
         <h4 id="content" class="intro"><b>Happiest Hour helps friends, coworkers or teammates
             suggest a location, set a time & send directions all in one place.</b>
         </h4>
-        <br>
+        <br> 
+      <div class="row"> 
+        <div id="happyLogo" class="col">
+          <img src="{% static "/images/yellow.jpg" %}" alt="Happiest Hour Logo" height="200" width="220">
+        </div> 
+        <div id="happyLogo" class="col">
         <a href="accounts/signup" id="signupLink">Join Today!</a>
+       </div>
     </div>
+</div>
 </div>
 </div>
 <br>

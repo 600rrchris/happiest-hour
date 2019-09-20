@@ -18,14 +18,15 @@ html {
 .navbar.navbar-expand-lg.navbar-light.bg-warning
 {
 background: #155263 !important;
+
 }
 li.nav-item {
-  padding-top: 70px;
+  padding-top: 50px;
   text-align: right;
 }
 .main {
 background: #ffc93c;
-min-height: 800px;
+min-height: 600px;
 height: 100%;
 padding: 10px;
 }
@@ -50,12 +51,12 @@ background: linear-gradient(110deg, #FFFFF0 60%, #ffed4b9a 60%);
 height: 220px, auto;
 width: 500px;
 padding: 20px 0 0 30px;
-border: 5px solid #ff6f3c;
+border: 5px solid #307e94;
 border-radius: 5px;
 box-shadow: 0 5px 8px #464646;
 }
 #home {
-  text-align: justify;
+  text-align: baseline;
 }
 i.material-icons {
 color: #d55e00;
@@ -68,7 +69,7 @@ a.card-link {
 }
 
 a.nav-link {
-  font-size: 16px;
+  font-size: 20px;
   display: inline;
   padding-left: 0;
   padding-right: 50px;
@@ -170,6 +171,12 @@ border-radius: 2px;
 margin-left: -16px;
 margin-right: 15px;
 }
+#signupLink {
+text-align: start;
+}
+div#happyLogo.col {
+padding: 0 !important;
+}
 #log {
   width: 400px;
   text-align: left;
@@ -212,4 +219,20 @@ form.login, form.create, input.btn, input#addevent {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
 }
