@@ -1,60 +1,69 @@
 # Title
 
-[Happiest ](https://deaf-friendly.herokuapp.com/posts)
+[Happiest Hour](https://happiest-hour.herokuapp.com)
 
 ## Overview
- A place where you can search for deaf-friendly businesses in your area or share your consumer experience and insights as deaf, deafblind, and hard of hearing individuals, friends/family of the deaf and those with a special interest in creating a deaf-friendly world.
-  
-The aim is to promote deaf-friendliness in your community via awareness and feedback.
+
+Happiest Hour simplifies organizing a happy hour with your coworkers, planning a weekend with your friends, or coordinating a soccer practice with your teammates all in one place. Through the app, the user can suggest a place, set a time and location and share privately with a group of choice.
 
 ## Entity Relationship Diagram
-![image description](../master/public/images/erd.jpg)
+![image description](../master/images/erd.jpg)
 
 ## Wireframe
 
-![image description](../master/public/images/wireframe.jpg)
+![Wreframe](../master/images/Home.jpg)
+
+![Wreframe](../master/images/AllEvents.jpg)
+
+![Wreframe](../master/public/images/CreateEvent.jpg)
+
+![Wreframe](../master/public/images/Detail.jpg)
 
 ## Screenshots
 
-![image description](../master/public/images/home.jpg)
+![image description](../master/images/homescreen.jpg)
 
-![image description](../master/public/images/business.jpg)
+![image description](../master/images/allgroups.jpg)
 
-![image description](../master/public/images/reviews.jpg)
+![image description](../master/images/groups.jpg)
 
-![image description](../master/public/images/form.jpg)
+![image description](../master/images/details.jpg)
 
 
 ## User Stories
 
-As a user, I can log in via Google authentication. 
+As a user I want to:
+	
+- sign up or log in 
 
-As a user, I can create a post for any existing business and identify it by name and location.
+- create a group that other users can join
 
-As a user, I can find existing posts, left by previous users, for the business I am interested in.
+- edit or delete a group created
 
-As a user, I can read reviews left by previous users.
+- create an event with details such as a title, address, date and time
 
-As a user, I can rate the business from a scale of one to five stars. 
+- share events created with other users
 
-As a user, I can check off a set of accomadations offered at said business.
+- edit or delete an event created
 
-As a user, I can leave a comment of my experience with that business. 
+- leave comments on the event
 
-As a user, I can edit or delete my review.
 
 
 ## Technologies Used
-HTML, CSS, Javascript, Express, Node.js, MongoDB, Mongoose, Materialize, Heroku
+HTML, CSS, Python, Django, Bootstrap, Heroku
 
 ## Stretch Goals
 
-Change number rating to star rating
+Polling - allow the user to vote on options for an event.
 
-Authorization
+Google Maps API - allow the user to view the address of the event location.
+
+User Profile - allow the user to view and edit personal information
 
 ## Next Steps
 
-Implement Google Maps API
+RSVP - allow the user to to an confirm attending an event.
 
-Implement search feature
+Calendar Integration - allow the user to add an event to their device calendars.
+
