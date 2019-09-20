@@ -4,7 +4,7 @@
 
 ## Overview
 
-Happiest Hour simplifies organizing a happy hour with your coworkers, planning a weekend with your friends, or coordinating a soccer practice with your teammates all in one place. Through the app, the user can suggest a place, set a time and location and share privately with a group of choice. 
+Happiest Hour simplifies organizing a happy hour with your coworkers, planning a weekend with your friends, or coordinating a soccer practice with your teammates all in one place. Through the app, the user can suggest a place, set a time and location and share privately with a group of choice.
 
 ## Entity Relationship Diagram
 ![image description](../master/images/erd.jpg)
@@ -21,13 +21,13 @@ Happiest Hour simplifies organizing a happy hour with your coworkers, planning a
 
 ## Screenshots
 
-![image description](../master/images/home.jpg)
+![image description](../master/images/homescreen.jpg)
 
-![image description](../master/images/business.jpg)
+![image description](../master/images/allgroups.jpg)
 
-![image description](../master/images/reviews.jpg)
+![image description](../master/images/groups.jpg)
 
-![image description](../master/images/form.jpg)
+![image description](../master/images/details.jpg)
 
 
 ## User Stories
@@ -58,6 +58,8 @@ HTML, CSS, Python, Django, Bootstrap, Heroku
 Polling - allow the user to vote on options for an event.
 
 Google Maps API - allow the user to view the address of the event location.
+
+User Profile - allow the user to view and edit personal information
 
 ## Next Steps
 
