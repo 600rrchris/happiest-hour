@@ -9,7 +9,7 @@
         <a href="{% url 'events_index'%}"></a>
         <div class="card">
                 <div class="card-body">
-                  <h3 class="card-title">{{ event.title }}</h3>
+                  <h5 id="title" class="card-title">{{ event.title }}</h5>
                     {% for group in event.group.all %}
                     <h6 class="card-title">{{ group.name }}</h6>
                          {% endfor %}
@@ -34,7 +34,7 @@
       <div class="comment-wrapper">
           <div class="panel panel-info">
               <div class="panel-heading">
-                  Comment panel
+               
               </div>
               <div class="panel-body">
                     <form action="{% url 'events_comments' event.id %}" class="form"  method="post">
@@ -52,16 +52,18 @@
                       <li class="media">
                           <div class="media-body">
                               <span class="text-muted pull-right">
-                                  <small class="text-muted">Time</small>
+                                  
                               </span>
-                              <p>@{{ user.username }}</p>
-                              <p> last login{{ user.last_login }} </p>
-                              <p> Am I online: {{ user.is_active }} </p>
-                              <p>date joined{{ user.date_joined }}</p>
-                              <p>
-                                    {{ comment.content }}
-                                    {{ comment.id }}
+                               
+                              <p style="color:#155263;">@{{ user.username }}
                               </p>
+                               <p> {{ comment.content }}</p> 
+                   
+                              <hr>
+                              <small>
+                            <p style="color:#155263;"> Last Login: {{ user.last_login }} </p>
+                              <p style="color:#155263;">Date Joined: {{ user.date_joined }}</p>
+                              </small>
  
                           </div>
                       </li>
